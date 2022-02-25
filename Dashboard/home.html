@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>Reel Data</title>
+	
+	<link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+	
+	<style>
+		html, body {
+			font-family: 'Open Sans';
+			margin: 0px;
+			padding: 0px;
+		}
+		
+		.box {
+			text-align: center; 
+			margin-left: auto; 
+			margin-right: auto; 
+			width: 100%;
+			padding-bottom: 45px;
+		}
+		
+		.gray {
+			background-color: rgba(241, 241, 241, 0.6);
+		}
+		
+		mark {
+			background-color: #f3ce13;
+		}
+		
+		.heading {
+			margin-left: auto; 
+			margin-right: auto; 
+			width: 85%;
+			padding-top: 15px;
+			padding-bottom: 15px;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class = "box" style = "padding-bottom: 25px; padding-top: 25px;">
+		<table style = "width: 85%; margin-left: auto; margin-right: auto;">
+			<tr>
+				<td> <img src = "assets/reel.PNG" style = "width: 150px;"> </td>
+				<td>
+					<h1><mark>&nbsp;&nbsp;REEL DATA&nbsp;&nbsp;</mark> Film Meets Figures</h1>
+					<p style = "font-weight: bold;">Lander Peter E. Cua, Jacob Bryan B. Gaba, Mark Edward M. Gonzales, Hylene Jules G. Lee</p>
+					<p>STADVDB Major Course Output 1, De La Salle University</p>
+				</td>
+				<td> <img src = "assets/IMDB_Logo_2016.svg" style = "width: 150px;"></td>
+			</tr>
+		</table>
+		
+		<div class = "heading">
+			<p style = "text-align: left;">Over the years, movies have been a reliable source of entertainment for people from all across the world with the movie industry producing hundreds of movies per year with genres varying from comedy, thriller, drama, history, etc. (Azfal & Latif, 2016). Starting from the 21st century, before the onset of the COVID-19 pandemic, the annual income of box office revenues alone ranges from $7 to 11 billion, making it an overwhelmingly successful multi-billion dollar industry (Nash Information Services, 2021). </p>
+			
+<p style = "text-align: left;">With the continuous influx of movies, various online platforms such as the Internet Movie Database (IMDb) and RottenTomatoes keep track of existing and newly released movies by gathering information about each movie’s actors, directors, production company, budget, and even ratings. With millions of tracked movies, IMDb is considered to be one of the top consumer sites for the movie industry as it provides an extensive searchable database for both casual use as well as academic viewing. </p>
+
+<p style = "text-align: left;">Given the reliability and extent of its database, IMDb was used throughout this project to analyze and visualize relevant movie data. More specifically, the two datasets: <i>(i)</i> IMDb Dataset by the Jožef Stefan Institute and <i>(ii)</i> IMDb Extensive Dataset were imported into a local MySQL data warehouse using an extraction, transformation, and loading (ETL) script and were subjected to various query processes. The goal of this study is to highlight the relationships between the different variables in the datasets, namely the directors, actors, genres, gross, votes, and rankings, while applying the necessary transformations to the dataset and employing the use of optimization techniques to make querying the large datasets more efficient. </p>
+
+<p style = "text-align: left;">This project also visualizes the findings obtained from the query processes through the development of an online analytical processing (OLAP) application entitled “Reel Data” using the data visualization software Tableau, where optimization strategies were applied to enhance the application’s performance. The OLAP application was designed to be easily utilized by both casual moviegoers and movie critics alike, allowing them to quickly see trends and notable movie industry statistics that could perhaps influence their next choice of movie.</p>
+</p>
+		</div>
+	</div>
+	
+	<!-- Next section -->
+	
+	<div class = "box gray">
+	
+		<div class = "heading">
+			<h2 style = "text-align: left;"> Movie Votes by Rating per Genre and Year </h1>
+			<h4 style = "text-align: left;"> For each genre, what is the total number of movie votes per year and decade?  </h1>
+		</div>
+	
+		<div class='tableauPlaceholder' id='viz1638178560606' style='margin-left: auto; margin-right: auto;'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;cg&#47;cggl-viz1&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='cggl-viz1&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;cg&#47;cggl-viz1&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1638178560606');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1155px';vizElement.style.height='590px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1155px';vizElement.style.height='590px';} else { vizElement.style.width='100%';vizElement.style.height='590px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+		
+	</div>
+	
+	<!-- Next section -->
+
+	<div class = "box">
+	
+		<div class = "heading">
+			<h2 style = "text-align: left;"> Movie Votes by Sex per Year and Genre </h1>
+			<h4 style = "text-align: left;"> For each year of each decade, what are the total number of female and male votes per genre? </h1>
+		</div>
+		
+		<div class='tableauPlaceholder' id='viz1638196359979' style='margin-left: auto; margin-right: auto;'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;cg&#47;cggl-viz2&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='cggl-viz2&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;cg&#47;cggl-viz2&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1638196359979');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1155px';vizElement.style.height='590px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1155px';vizElement.style.height='590px';} else { vizElement.style.width='100%';vizElement.style.height='590px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+	</div>
+	
+	
+	<!-- Next section -->
+	
+	<div class = "box gray">
+	
+		<div class = "heading">
+			<h2 style = "text-align: left;"> Most Prolific Actors by Genre </h1>
+			<h4 style = "text-align: left;"> For each genre, who are the top actors with the most number of movie appearances? </h1>
+		</div>
+	
+		<div class='tableauPlaceholder' id='viz1637862520804' style='margin-left: auto; margin-right: auto;'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;cg&#47;cggl-viz3&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='cggl-viz3&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;cg&#47;cggl-viz3&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1637862520804');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1155px';vizElement.style.height='619px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1155px';vizElement.style.height='619px';} else { vizElement.style.width='100%';vizElement.style.height='727px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+		
+	</div>
+	
+	
+	
+	<!-- Next section -->
+		
+	<div class = "box">
+	
+		<div class = "heading">
+			<h2 style = "text-align: left;"> Top Movie Genres by Country </h1>
+			<h4 style = "text-align: left;"> For each country, what are the top movie genres? </h1>
+		</div>
+		
+		<div class='tableauPlaceholder' id='viz1637866586182' style='margin-left: auto; margin-right: auto;'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;cg&#47;cggl-viz4&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='cggl-viz4&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;cg&#47;cggl-viz4&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                 <script type='text/javascript'>                    var divElement = document.getElementById('viz1637866586182');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1155px';vizElement.style.height='690px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1155px';vizElement.style.height='690px';} else { vizElement.style.width='100%';vizElement.style.height='690px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+	</div>
+	
+	
+	<!-- Next section -->
+		
+	<div class = "box gray">
+	
+		<div class = "heading">
+			<h2 style = "text-align: left;"> Genre Trends by Country and Year </h1>
+			<h4 style = "text-align: left;"> For each country, how many movies per genre are produced per year and decade? </h1>
+		</div>
+		
+		<div class='tableauPlaceholder' id='viz1638151493494' style='margin-left: auto; margin-right: auto;'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;cg&#47;cggl-viz6&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='cggl-viz6&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;cg&#47;cggl-viz6&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1638151493494');                     var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1155px';vizElement.style.height='590px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1155px';vizElement.style.height='590px';} else { vizElement.style.width='100%';vizElement.style.height='590px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+	</div>
+	
+	
+	<!-- Next section -->
+		
+	<div class = "box">
+	
+		<div class = "heading">
+			<h2 style = "text-align: left;"> Notable Production Companies by Movie Quality  </h1>
+			<h4 style = "text-align: left;"> What are the production companies that have released over 10 movies with a rank above the average rank and a number of votes above the average total number of votes? </h1>
+		</div>
+		
+		<div class='tableauPlaceholder' id='viz1638126347592' style='margin-left: auto; margin-right: auto;'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;cg&#47;cggl-viz5&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='views&#47;cggl-viz5&#47;Dashboard1?:language=en-US&amp;:embed=true&amp;publish=yes' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;cg&#47;cggl-viz5&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1638126347592');                    var vizElement = divElement.getElementsByTagName('object')[0];                     if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1155px';vizElement.style.height='619px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1155px';vizElement.style.height='619px';} else { vizElement.style.width='100%';vizElement.style.height='727px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+	</div>
+
+	
+	<!-- Next section -->
+	
+	<div class = "box gray">
+	
+		<div class = "heading">
+			<h2 style = "text-align: left;"> Highest-Grossing Directors' Portfolios </h1>
+			<h4 style = "text-align: left;"> For each of the top directors with the highest gross worths, what are their highest-rated movies?
+ </h1>
+		</div>
+		
+		<div class='tableauPlaceholder' id='viz1637903418366' style='margin-left: auto; margin-right: auto;'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;cg&#47;cggl-viz7&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='views&#47;cggl-viz7&#47;Dashboard1?:language=en-US&amp;:embed=true&amp;publish=yes' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;cg&#47;cggl-viz7&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1637903418366');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1155px';vizElement.style.height='619px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1155px';vizElement.style.height='619px';} else { vizElement.style.width='100%';vizElement.style.height='727px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+		
+	</div>
+	
+</body>
+
+</html>
